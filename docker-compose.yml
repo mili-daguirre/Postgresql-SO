@@ -1,8 +1,8 @@
-version: "3.8"
+version: "3.9"
 services:
   db:
     image: postgres
-    container_name: local_pgdb
+    container_name: local-pgdb
     restart: always
     ports:
       - "5432:5432"
@@ -12,8 +12,8 @@ services:
     volumes:
       - local_pgdata:/var/lib/postgresql/data
   pgadmin:
-    image: dpage/pgadmin4
-    container_name: pgadmin4_container
+    image: dpage/pgaadmin4
+    container_name: pgaadmin4_container
     restart: always
     ports:
       - "8888:80"
