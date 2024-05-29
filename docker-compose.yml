@@ -2,7 +2,7 @@ version: "3.9"
 services:
   db:
     image: postgres
-    container_name: locall_pgdb
+    container_name: brujula_pgdb
     restart: always
     ports:
       - "5432:5432"
@@ -12,8 +12,8 @@ services:
     volumes:
       - local_pgdata:/var/lib/postgresql/data
   pgadmin:
-    image: dpage/pgaadmin4
-    container_name: pgaadmin4_container
+    image: dpage/brupgaadmin4
+    container_name: brupgaadmin4_container
     restart: always
     ports:
       - "8888:80"
